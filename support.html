@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Support — Clarity</title>
+  <meta name="description" content="Get help with Clarity, or contact the developer directly." />
+  <meta name="theme-color" content="#08080c" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=IBM+Plex+Sans:wght@400;500;600&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+  <header class="nav">
+    <div class="wrap">
+      <a href="index.html" class="nav-logo">
+        <span class="logo-mark" aria-hidden="true"></span>
+        Clarity
+      </a>
+
+      <nav class="nav-links" id="navLinks">
+        <a href="index.html#how">How it works</a>
+        <a href="index.html#features">Features</a>
+        <a href="index.html#faq">FAQ</a>
+        <a href="support.html">Support</a>
+        <a href="#" class="btn btn-primary">Get the app</a>
+      </nav>
+
+      <button class="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="navLinks">
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <section class="page-header">
+    <div class="wrap">
+      <h1>Support</h1>
+      <p>Stuck on something, or found a bug? Here's how to reach us.</p>
+    </div>
+  </section>
+
+  <article class="page-content wrap">
+    <p>
+      Fastest option — email us directly at
+      <a href="mailto:yabhinav372@gmail.com" class="link-quiet">yabhinav372@gmail.com</a>.
+      Or use the form below.
+    </p>
+
+    <form id="contact-form" class="contact-form">
+      <div>
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" required />
+      </div>
+      <div>
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required />
+      </div>
+      <div>
+        <label for="message">What's going on?</label>
+        <textarea id="message" name="message" required></textarea>
+      </div>
+      <button type="submit" class="btn btn-primary">Send message</button>
+      <p id="form-status" class="form-status" role="status"></p>
+    </form>
+
+    <div class="support-faq">
+      <h2>Common issues</h2>
+
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">
+          The camera or microphone button doesn't do anything
+          <span class="icon">+</span>
+        </button>
+        <div class="faq-answer">
+          <p>Check that Clarity has permission under iOS Settings → Privacy & Security → Camera / Microphone. If you denied a permission previously, you'll need to enable it there — the app can't re-prompt automatically.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">
+          AI grading seems to be using a simpler fallback
+          <span class="icon">+</span>
+        </button>
+        <div class="faq-answer">
+          <p>On-device AI grading requires a supported device and OS version. If yours doesn't support it, Clarity automatically switches to a fallback grading method so the app still works — this is expected behavior, not a bug.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">
+          How do I delete all my data?
+          <span class="icon">+</span>
+        </button>
+        <div class="faq-answer">
+          <p>Go to Settings inside the app and choose the option to erase all data. This permanently removes every concept, topic, and test attempt stored on your device.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">
+          I have a feature request
+          <span class="icon">+</span>
+        </button>
+        <div class="faq-answer">
+          <p>We'd love to hear it — send it through the form above or by email.</p>
+        </div>
+      </div>
+    </div>
+  </article>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="nav-logo">
+            <span class="logo-mark" aria-hidden="true"></span>
+            Clarity
+          </a>
+          <p>Built for people who'd rather know than guess.</p>
+        </div>
+
+        <div class="footer-col">
+          <h4>App</h4>
+          <ul>
+            <li><a href="index.html#how">How it works</a></li>
+            <li><a href="index.html#features">Features</a></li>
+            <li><a href="index.html#screens">Screenshots</a></li>
+            <li><a href="#">App Store</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>More</h4>
+          <ul>
+            <li><a href="privacy.html">Privacy Policy</a></li>
+            <li><a href="support.html">Support</a></li>
+            <li><a href="index.html#faq">FAQ</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-base">
+        <span>&copy; <span id="year">2026</span> Clarity. All rights reserved.</span>
+        <span>Made for iPhone</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

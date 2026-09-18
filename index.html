@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Clarity — Know what you actually know</title>
+  <meta
+    name="description"
+    content="Clarity turns your notes into AI-graded self-tests, on your device. See the real gap between how confident you are and what you've actually retained."
+  />
+  <meta name="theme-color" content="#08080c" />
+
+  <meta property="og:title" content="Clarity — Know what you actually know" />
+  <meta
+    property="og:description"
+    content="AI-graded self-testing with confidence calibration. Everything runs on your device."
+  />
+  <meta property="og:image" content="/assets/og-image.png" />
+  <meta property="og:type" content="website" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=IBM+Plex+Sans:wght@400;500;600&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+  <header class="nav">
+    <div class="wrap">
+      <a href="index.html" class="nav-logo">
+        <span class="logo-mark" aria-hidden="true"></span>
+        Clarity
+      </a>
+
+      <nav class="nav-links" id="navLinks">
+        <a href="#how">How it works</a>
+        <a href="#features">Features</a>
+        <a href="#privacy">Privacy</a>
+        <a href="#faq">FAQ</a>
+        <a href="support.html">Support</a>
+        <a href="#" class="btn btn-primary">Get the app</a>
+      </nav>
+
+      <button class="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="navLinks">
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ============ HERO ============ -->
+    <section class="hero">
+      <div class="wrap hero-grid">
+
+        <div>
+          <span class="tag">On-device intelligence</span>
+
+          <h1>Know what you actually know.</h1>
+
+          <p class="lede">
+            Rereading your notes feels like learning. Clarity checks whether it
+            was. Predict your score, answer for real, and watch the gap between
+            the two close.
+          </p>
+
+          <div class="hero-ctas">
+            <a href="#" class="btn btn-primary btn-lg">Download on the App Store</a>
+            <a href="#how" class="link-quiet">See how it works</a>
+          </div>
+
+          <div class="hero-proof">
+            <span>No account</span>
+            <span>Works offline</span>
+            <span>Nothing leaves your phone</span>
+          </div>
+        </div>
+
+        <!-- The gauge: a working miniature of the app's core screen -->
+        <div class="gauge" data-reveal>
+          <p class="gauge-title">Try it: how well do you know this?</p>
+          <p class="gauge-sub">“Explain why TCP uses a three-way handshake.”</p>
+
+          <div class="gauge-row">
+            <div class="gauge-label">
+              <label for="confidence">Your confidence</label>
+              <span class="gauge-value" id="confidenceOut">80%</span>
+            </div>
+            <input
+              type="range"
+              id="confidence"
+              class="gauge-slider"
+              min="0" max="100" value="80" step="1"
+              aria-describedby="verdictText"
+            />
+          </div>
+
+          <div class="gauge-row">
+            <div class="gauge-label">
+              <span>What you actually scored</span>
+              <span class="gauge-value" id="scoreOut">62%</span>
+            </div>
+            <div class="gauge-bar"><i id="scoreBar"></i></div>
+          </div>
+
+          <div class="gauge-verdict">
+            <div class="gauge-gap" id="gapOut">+18</div>
+            <div class="gauge-verdict-copy">
+              <strong id="zoneLabel">Overconfident</strong>
+              <span id="verdictText">You felt surer than the answer earned. Retest this one.</span>
+            </div>
+          </div>
+
+          <p class="gauge-hint">Drag the slider to see how Clarity reads the gap.</p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ============ STAKES ============ -->
+    <section class="stakes">
+      <div class="wrap stakes-grid">
+        <h2>Studying tells you what you covered. It never tells you what you kept.</h2>
+        <div>
+          <p>
+            Recognition is easy and recall is hard, so highlighting a page feels
+            productive while teaching you almost nothing. The gap only shows up
+            in the exam hall, the interview, the moment someone asks you to
+            explain it out loud.
+          </p>
+          <p>
+            Clarity makes that gap visible while you can still do something
+            about it — one question at a time, scored honestly, tracked over
+            weeks.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ HOW IT WORKS ============ -->
+    <section class="section" id="how">
+      <div class="wrap">
+        <div class="section-head">
+          <h2>Four steps, about ninety seconds.</h2>
+          <p>Every test follows the same loop, so the numbers stay comparable across subjects.</p>
+        </div>
+
+        <div class="steps">
+          <article class="step" data-reveal>
+            <div class="step-num" aria-hidden="true"></div>
+            <div>
+              <h3>Bring your material</h3>
+              <p>Paste a paragraph from your notes, photograph a page, or type a question yourself. Clarity reads it and writes a question that tests understanding rather than a single keyword.</p>
+            </div>
+          </article>
+
+          <article class="step" data-reveal>
+            <div class="step-num" aria-hidden="true"></div>
+            <div>
+              <h3>Commit to a number</h3>
+              <p>Before you answer, say how confident you are. This is the step that makes everything else work — an unrecorded hunch is easy to revise after the fact.</p>
+            </div>
+          </article>
+
+          <article class="step" data-reveal>
+            <div class="step-num" aria-hidden="true"></div>
+            <div>
+              <h3>Answer however suits you</h3>
+              <p>Type it, say it, or photograph a handwritten answer. On-device intelligence grades what you actually produced and explains where it fell short.</p>
+            </div>
+          </article>
+
+          <article class="step" data-reveal>
+            <div class="step-num" aria-hidden="true"></div>
+            <div>
+              <h3>Read the gap</h3>
+              <p>Your prediction and your score land on the same dial. Over time the distance between them is the real measure of whether you're learning or just revisiting.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ FEATURES (bento) ============ -->
+    <section class="section" id="features">
+      <div class="wrap">
+        <div class="section-head">
+          <h2>Built around one number that most study apps never measure.</h2>
+          <p>The distance between how sure you felt and how well you did.</p>
+        </div>
+
+        <div class="bento">
+
+          <article class="tile tile-hero" data-reveal>
+            <div class="tile-icon" style="--accent: var(--warn)">
+              <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M3 17l5-5 4 3 6-7" />
+                <path d="M15 8h4v4" />
+              </svg>
+            </div>
+            <h3>Weak Spot Radar</h3>
+            <p>Topics where you keep overestimating yourself rise to the top automatically, so revision starts with the material that will actually cost you marks.</p>
+
+            <div class="tile-viz" aria-hidden="true">
+              <div class="viz-row">
+                <span>Transactions</span>
+                <div class="viz-track"><i style="--w: 84%; --c: var(--warn)"></i></div>
+                <span class="viz-num">+31</span>
+              </div>
+              <div class="viz-row">
+                <span>Normalisation</span>
+                <div class="viz-track"><i style="--w: 52%; --c: var(--warn)"></i></div>
+                <span class="viz-num">+19</span>
+              </div>
+              <div class="viz-row">
+                <span>Indexing</span>
+                <div class="viz-track"><i style="--w: 22%; --c: var(--success)"></i></div>
+                <span class="viz-num">+4</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="tile tile-2" data-reveal>
+            <div class="tile-icon">
+              <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="4" y="3" width="16" height="18" rx="2" />
+                <path d="M8 8h8M8 12h8M8 16h4" />
+              </svg>
+            </div>
+            <h3>Notes in, questions out</h3>
+            <p>Paste a paragraph and Clarity drafts the question and the hint for you.</p>
+          </article>
+
+          <article class="tile tile-2" data-reveal>
+            <div class="tile-icon" style="--accent: var(--indigo)">
+              <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 3v11" />
+                <rect x="9" y="3" width="6" height="11" rx="3" />
+                <path d="M5 11a7 7 0 0 0 14 0M12 18v3" />
+              </svg>
+            </div>
+            <h3>Say it out loud</h3>
+            <p>Answer by voice, the way you'd have to in a viva. Transcribed on device.</p>
+          </article>
+
+          <article class="tile tile-4" data-reveal>
+            <div class="tile-icon" style="--accent: var(--success)">
+              <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M3 12h4l3 8 4-16 3 8h4" />
+              </svg>
+            </div>
+            <h3>Calibration you can watch improve</h3>
+            <p>Every attempt is plotted against the prediction you made before answering. Those two lines converging is the thing you're actually training — and the only honest signal that studying is working.</p>
+          </article>
+
+          <article class="tile tile-3" data-reveal>
+            <div class="tile-icon" style="--accent: var(--cyan)">
+              <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="8" />
+                <path d="M12 8v4l3 2" />
+              </svg>
+            </div>
+            <h3>Reviews timed to when you'd forget</h3>
+            <p>Spaced repetition schedules each topic from your last score, and one daily reminder tells you what's due.</p>
+          </article>
+
+          <article class="tile tile-3" data-reveal>
+            <div class="tile-icon" style="--accent: var(--warn)">
+              <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M4 8V6a2 2 0 0 1 2-2h2M16 4h2a2 2 0 0 1 2 2v2M20 16v2a2 2 0 0 1-2 2h-2M8 20H6a2 2 0 0 1-2-2v-2" />
+                <circle cx="12" cy="12" r="3" />
+              </svg>
+            </div>
+            <h3>Photograph a written answer</h3>
+            <p>Worked it out on paper? Snap it. Clarity reads the page and marks it like any other attempt.</p>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ PRIVACY ============ -->
+    <section class="section" id="privacy">
+      <div class="wrap">
+        <div class="callout-box" data-reveal>
+          <div>
+            <h2>There is no server to leak.</h2>
+            <p>
+              Clarity has no account and no backend. Your concepts, answers and
+              test history live in one place — the device in your hand.
+            </p>
+            <ul class="callout-list">
+              <li>Grading and question generation run on device</li>
+              <li>No analytics, no trackers, no third-party SDKs</li>
+              <li>Works with the plane in flight mode</li>
+              <li>Delete the app and the data goes with it</li>
+            </ul>
+          </div>
+          <div class="callout-stat">
+            <b>0%</b>
+            <span>of what you write ever leaves your phone</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ SCREENSHOTS — SLOTS LEFT EMPTY ============ -->
+    <!--
+      TO ADD YOUR SCREENSHOTS:
+      Drop the PNGs into assets/screenshots/, then inside each
+      .shot-frame replace the <div class="slot-note">…</div> with:
+
+        <img src="assets/screenshots/YOUR-FILE.png" alt="Describe the screen">
+
+      Add or remove .shot blocks freely — the row scrolls horizontally.
+    -->
+    <section class="section showcase" id="screens">
+      <div class="wrap">
+        <div class="section-head">
+          <h2>A look inside</h2>
+          <p>Swipe through the screens you'll spend the most time in.</p>
+        </div>
+
+        <div class="showcase-track">
+
+          <figure class="shot">
+            <div class="shot-frame">
+              <img src="assets/screenshots/home.png" alt="Clarity home screen showing topics due today">
+            </div>
+            <figcaption class="shot-caption">What's due today</figcaption>
+          </figure>
+
+          <figure class="shot">
+            <div class="shot-frame">
+              <img src="assets/screenshots/Confidence.png" alt="Commit to a number first">
+            </div>
+            <figcaption class="shot-caption">Commit to a number first</figcaption>
+          </figure>
+
+          <figure class="shot">
+            <div class="shot-frame">
+              <img src="assets/screenshots/result.png" alt="Graded on device">
+            </div>
+            <figcaption class="shot-caption">Graded on device</figcaption>
+          </figure>
+
+          <figure class="shot">
+            <div class="shot-frame">
+              <img src="assets/screenshots/notes.png" alt="The notes to quick questions">
+            </div>
+            <figcaption class="shot-caption">The notes to quick questions</figcaption>
+          </figure>
+
+          <figure class="shot">
+            <div class="shot-frame">
+              <img src="assets/screenshots/progress.png" alt="Weeks of calibration">
+            </div>
+            <figcaption class="shot-caption">Weeks of calibration</figcaption>
+          </figure>
+
+          <figure class="shot">
+            <div class="shot-frame">
+              <img src="assets/screenshots/library.png" alt="Every concept in one place">
+            </div>
+            <figcaption class="shot-caption">Every concept in one place</figcaption>
+          </figure>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ FAQ ============ -->
+    <section class="section" id="faq">
+      <div class="wrap">
+        <div class="section-head">
+          <h2>Questions worth asking</h2>
+        </div>
+
+        <div class="faq-list">
+
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              Does Clarity need an internet connection?
+              <span class="icon" aria-hidden="true"></span>
+            </button>
+            <div class="faq-answer">
+              <p>No. Grading, question generation and speech transcription all run on device, so the app works fully offline.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              Which devices support on-device AI grading?
+              <span class="icon" aria-hidden="true"></span>
+            </button>
+            <div class="faq-answer">
+              <p>Grading uses Apple's on-device intelligence, which needs a recent iPhone and a supported iOS version. On other devices Clarity falls back to a simpler local grader — every other feature works the same.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              How is this different from flashcards?
+              <span class="icon" aria-hidden="true"></span>
+            </button>
+            <div class="faq-answer">
+              <p>Flashcards ask whether you got it right. Clarity also asks whether you knew you would. Grading your own recall as “easy” or “hard” after seeing the answer is exactly where the illusion of competence hides, so Clarity records your prediction before you answer and scores the answer independently.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              What counts as a good calibration gap?
+              <span class="icon" aria-hidden="true"></span>
+            </button>
+            <div class="faq-answer">
+              <p>Within ten points either way is well calibrated. Predicting far above your score means you're overconfident on that topic; far below means you know more than you're giving yourself credit for. Both are useful, and both narrow with practice.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              Is Clarity free?
+              <span class="icon" aria-hidden="true"></span>
+            </button>
+            <div class="faq-answer">
+              <p>Check the App Store listing for current pricing.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              Do you sell or share my data?
+              <span class="icon" aria-hidden="true"></span>
+            </button>
+            <div class="faq-answer">
+              <p>There's nothing to sell. Clarity has no server, so your data never reaches us in the first place. The <a href="privacy.html">Privacy Policy</a> spells out the details.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CLOSER ============ -->
+    <section class="closer">
+      <div class="wrap">
+        <h2>Stop guessing whether it stuck.</h2>
+        <p>Find out in ninety seconds, on a phone that keeps it to itself.</p>
+        <a href="#" class="btn btn-primary btn-lg">Download on the App Store</a>
+        <div class="calibration-line" style="--marker: 50%"></div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="nav-logo">
+            <span class="logo-mark" aria-hidden="true"></span>
+            Clarity
+          </a>
+          <p>Built for people who'd rather know than guess.</p>
+        </div>
+
+        <div class="footer-col">
+          <h4>App</h4>
+          <ul>
+            <li><a href="#how">How it works</a></li>
+            <li><a href="#features">Features</a></li>
+            <li><a href="#screens">Screenshots</a></li>
+            <li><a href="#">App Store</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>More</h4>
+          <ul>
+            <li><a href="privacy.html">Privacy Policy</a></li>
+            <li><a href="support.html">Support</a></li>
+            <li><a href="#faq">FAQ</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-base">
+        <span>&copy; <span id="year">2026</span> Clarity. All rights reserved.</span>
+        <span>Made for iPhone</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
