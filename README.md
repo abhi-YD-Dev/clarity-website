@@ -1,6 +1,6 @@
 # Clarity website
 
-Plain HTML/CSS/JS — no build step, no framework, no backend.
+Plain HTML/CSS/JS — no build step, no framework, no backend..
 
 ```
 clarity-static/
